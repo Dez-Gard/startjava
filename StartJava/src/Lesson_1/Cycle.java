@@ -24,6 +24,7 @@ public class Cycle {
 			x++;
 			} while (x < 20);
 
-		System.out.println(result);		
+		System.out.println(result);
+		
 	}
 }
