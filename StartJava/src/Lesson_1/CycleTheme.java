@@ -1,6 +1,6 @@
 package Lesson_1;
 
-public class Cycle {
+public class CycleTheme {
 
 	public static void main(String[] args) {
 
