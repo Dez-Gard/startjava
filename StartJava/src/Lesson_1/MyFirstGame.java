@@ -4,8 +4,7 @@ public class MyFirstGame {
 
 	public static void main(String[] args) {
 
-		int diapason = 100;
-		int randomNumber = (int) (Math.random() * diapason);
+		int randomNumber = 67;
 
 		for (int niceTry = 100; niceTry <= 100; niceTry--) {
 			if (niceTry > randomNumber) {
