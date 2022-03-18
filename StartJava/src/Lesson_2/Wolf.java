@@ -2,13 +2,12 @@ package Lesson_2;
 
 public class Wolf {
 
-	String gender = "male";
-	String name = "Balto";
-	float weight = 54.3f;
-	int age = 5;
-	String color = "gray";
-	
-	
+	private String gender = "male";
+	private String name = "Balto";
+	private float weight = 54.3f;
+	private int age = 5;
+	private String color = "gray";
+
 	public Wolf(String gender, String name, float weight, int age, String color) {
 		super();
 		this.gender = gender;
@@ -18,23 +17,66 @@ public class Wolf {
 		this.color = color;
 	}
 
-	void walk() {
+	public void walk() {
 		System.out.println("Гуляет");
 	}
 	
-	void sit() {
+	public void sit() {
 		System.out.println("Сидит");
 	}
 	
-	void run() {
+	public void run() {
 		System.out.println("Бежит");
 	}
 	
-	void howl() {
+	public void howl() {
 		System.out.println("Воет");
 	}
 	
-	void hunt() {
+	public void hunt() {
 		System.out.println("Охотится");
+	}
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public float getWeight() {
+		return weight;
+	}
+
+	public void setWeight(float weight) {
+		this.weight = weight;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		if (age > 8) {
+			System.out.println("Некорректный возраст");
+		} else {
+		this.age = age;
+		}
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
 	}
 }
