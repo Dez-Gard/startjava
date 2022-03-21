@@ -38,6 +38,8 @@ public class Calculator {
 		case '%':
 			System.out.println("Ответ: " + (var1 % var2));
 			break;
+		default :
+			System.out.println("Error");
 		}
 	}
 
