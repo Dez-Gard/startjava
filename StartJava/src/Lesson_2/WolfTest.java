@@ -4,9 +4,9 @@ public class WolfTest {
 
 	public static void main(String[] args) {
 	
-		Wolf Raska = new Wolf("female", "Raska", 45, 9, "white");
+		Wolf Raska = new Wolf("male", "Raska", 45, 9, "white");
 		
-		Raska.setAge(9);		
+		Raska.setAge(8);		
 		Raska.setGender("female");
 		Raska.setName("Raska");
 		Raska.setWeight(45);	
