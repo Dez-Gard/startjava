@@ -1,4 +1,4 @@
-package Lesson_2;
+package com.startjava.Lesson_2_3.game;
 
 import java.util.Scanner;
 
@@ -7,11 +7,11 @@ public class GuessNumberTest {
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
-		System.out.print("Введите имя первого игрока: ");
+		System.out.print("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: ");
 		String name1 = scan.nextLine();
 		Player player1 = new Player(name1);
 		
-		System.out.print("Введите имя второго игрока: ");
+		System.out.print("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: ");
 		String name2 = scan.nextLine();
 		Player player2 = new Player(name2);
 		
@@ -23,7 +23,7 @@ public class GuessNumberTest {
 			if (answer.equals("yes")) {
 			game.start();
 			}
-			System.out.print("Хотите продолжить вычисления? [yes/no]: ");
+			System.out.print("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ? [yes/no]: ");
 			answer = scan.nextLine();
 			
 		} while (!answer.equals("no"));

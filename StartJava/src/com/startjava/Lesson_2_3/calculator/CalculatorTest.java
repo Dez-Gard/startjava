@@ -1,4 +1,4 @@
-package Lesson_2;
+package com.startjava.Lesson_2_3.calculator;
 
 import java.util.Scanner;
 
@@ -11,22 +11,22 @@ public class CalculatorTest {
 		String answer = "yes";
 
 		while (answer.equals("yes")) {
-			System.out.print("Введите первое число: ");
+			System.out.print("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: ");
 			int var1 = scan.nextInt();
 			calc.setVar1(var1);
 
-			System.out.print("Введите знак математической операции: ");
+			System.out.print("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: ");
 			char mathOperation = scan.next().charAt(0);
 			calc.setMathOperation(mathOperation);
 
-			System.out.print("Введите второе число: ");
+			System.out.print("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: ");
 			int var2 = scan.nextInt();
 			calc.setVar2(var2);
 
 			calc.calculate();
 
 			do {
-				System.out.print("Хотите продолжить вычисления? [yes/no]: ");
+				System.out.print("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ? [yes/no]: ");
 				answer = scan.next();
 			} while (!answer.equals("yes") && !answer.equals("no"));
 		}

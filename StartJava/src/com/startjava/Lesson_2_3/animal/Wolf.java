@@ -1,4 +1,4 @@
-package Lesson_2;
+package com.startjava.Lesson_2_3.animal;
 
 public class Wolf {
 
@@ -18,23 +18,23 @@ public class Wolf {
 	}
 
 	public void walk() {
-		System.out.println("Гуляет");
+		System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 	
 	public void sit() {
-		System.out.println("Сидит");
+		System.out.println("пїЅпїЅпїЅпїЅпїЅ");
 	}
 	
 	public void run() {
-		System.out.println("Бежит");
+		System.out.println("пїЅпїЅпїЅпїЅпїЅ");
 	}
 	
 	public void howl() {
-		System.out.println("Воет");
+		System.out.println("пїЅпїЅпїЅпїЅ");
 	}
 	
 	public void hunt() {
-		System.out.println("Охотится");
+		System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	}
 	public String getGender() {
 		return gender;
@@ -66,7 +66,7 @@ public class Wolf {
 
 	public void setAge(int age) {
 		if (age > 8) {
-			System.out.println("Некорректный возраст");
+			System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 		} else {
 		this.age = age;
 		}

@@ -1,4 +1,4 @@
-package Lesson_2;
+package com.startjava.Lesson_2_3.calculator;
 
 public class Calculator {
 
@@ -21,22 +21,22 @@ public class Calculator {
 	public void calculate() {
 		switch (mathOperation) {
 		case '+':
-			System.out.println("Ответ: " + (var1 + var2));
+			System.out.println("пїЅпїЅпїЅпїЅпїЅ: " + (var1 + var2));
 			break;
 		case '-':
-			System.out.println("Ответ: " + (var1 - var2));
+			System.out.println("пїЅпїЅпїЅпїЅпїЅ: " + (var1 - var2));
 			break;
 		case '*':
-			System.out.println("Ответ: " + (var1 * var2));
+			System.out.println("пїЅпїЅпїЅпїЅпїЅ: " + (var1 * var2));
 			break;
 		case '/':
-			System.out.println("Ответ: " + (var1 / var2));
+			System.out.println("пїЅпїЅпїЅпїЅпїЅ: " + (var1 / var2));
 			break;
 		case '^':
 			pow();
 			break;
 		case '%':
-			System.out.println("Ответ: " + (var1 % var2));
+			System.out.println("пїЅпїЅпїЅпїЅпїЅ: " + (var1 % var2));
 			break;
 		default :
 			System.out.println("Error");
@@ -48,6 +48,6 @@ public class Calculator {
 		for (int i = 0; i < var2; i++) {
 			result = result * var1;
 		}
-		System.out.println("Ответ: " + result);
+		System.out.println("пїЅпїЅпїЅпїЅпїЅ: " + result);
 	}
 }
