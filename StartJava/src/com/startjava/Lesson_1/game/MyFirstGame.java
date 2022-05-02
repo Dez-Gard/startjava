@@ -7,18 +7,18 @@ public class MyFirstGame {
 		int computerNumber = 67;
 		int myNumber = 50;
 
-		System.out.println("Стартуем!");
+		System.out.println("РЎС‚Р°СЂС‚СѓРµРј!");
 
 		while (myNumber != computerNumber) {
 			if (myNumber > computerNumber) {
-				System.out.println(myNumber + " Данное число больше того, что загадал компьютер");
+				System.out.println(myNumber + " Р”Р°РЅРЅРѕРµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ С‚РѕРіРѕ, С‡С‚Рѕ Р·Р°РіР°РґР°Р» РєРѕРјРїСЊСЋС‚РµСЂ");
 				myNumber--;
 			}
 			if (myNumber < computerNumber) {
-				System.out.println(myNumber + " Данное число меньше того, что загадал компьютер");
+				System.out.println(myNumber + " Р”Р°РЅРЅРѕРµ С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ С‚РѕРіРѕ, С‡С‚Рѕ Р·Р°РіР°РґР°Р» РєРѕРјРїСЊСЋС‚РµСЂ");
 				myNumber++;
 			}
 		}
-		System.out.println("Вы угадали! Это число " + computerNumber);
+		System.out.println("Р’С‹ СѓРіР°РґР°Р»Рё! Р­С‚Рѕ С‡РёСЃР»Рѕ " + computerNumber);
 	}
 }

@@ -1,4 +1,4 @@
-package com.startjava.Lesson_2_3.animal;
+package com.startjava.Lesson_2_3_4.animal;
 
 public class Wolf {
 
@@ -18,23 +18,23 @@ public class Wolf {
 	}
 
 	public void walk() {
-		System.out.println("������");
+		System.out.println("Гуляет");
 	}
 	
 	public void sit() {
-		System.out.println("�����");
+		System.out.println("Сидит");
 	}
 	
 	public void run() {
-		System.out.println("�����");
+		System.out.println("Бежит");
 	}
 	
 	public void howl() {
-		System.out.println("����");
+		System.out.println("Воет");
 	}
 	
 	public void hunt() {
-		System.out.println("��������");
+		System.out.println("Охотиться");
 	}
 	public String getGender() {
 		return gender;
@@ -66,7 +66,7 @@ public class Wolf {
 
 	public void setAge(int age) {
 		if (age > 8) {
-			System.out.println("������������ �������");
+			System.out.println("Не корректное значение");
 		} else {
 		this.age = age;
 		}
