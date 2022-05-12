@@ -1,45 +1,126 @@
 package com.startjava.Lesson_2_3_4.game;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 public class GuessNumber {
-	
-	private Player pl1;
-	private Player pl2;
-	
-	public GuessNumber(Player pl1, Player pl2) {
-	this.pl1 = pl1;
-	this.pl2 = pl2;
-	}
-	
-	public void start() {
-		Random rnd = new Random();
-		int compNum = rnd.nextInt(100 + 1);
-		Scanner scan = new Scanner(System.in);
-		
-		while(true) {
-			System.out.print(pl1.getName() + ", введите число: ");
-			int myNum = scan.nextInt();
-			if (myNum == compNum) {
-				System.out.println("Победил игрок - " + pl1.getName());
-				break;
-			} else if (myNum > compNum) {
-				System.out.println(myNum + " - БОЛЬШЕ загаданного");
-			} else if (myNum < compNum) {
-				System.out.println(myNum + " - МЕНЬШЕ загаданного");
-			}
-			
-			System.out.print(pl2.getName() + ", введите число: ");
-			myNum = scan.nextInt();
-			if (myNum == compNum) {
-				System.out.println("Победил игрок - " + pl2.getName());
-				break;
-			} else if (myNum > compNum) {
-				System.out.println(myNum + " - БОЛЬШЕ загаданного");
-			} else if (myNum < compNum) {
-				System.out.println(myNum + " - МЕНЬШЕ загаданного");
-			}
-		}
-	}
+
+    private final Player pl1;
+    private final Player pl2;
+    private final Player pl3;
+
+    public GuessNumber(Player pl1, Player pl2, Player pl3) {
+        this.pl1 = pl1;
+        this.pl2 = pl2;
+        this.pl3 = pl3;
+    }
+
+    public void start() {
+        Random rnd = new Random();
+        int compNum = rnd.nextInt(100 + 1);
+        Scanner scan = new Scanner(System.in);
+
+        int i = 1;
+        while (i < 6) {
+            System.out.print(pl1.getName() + ", введите число: ");
+            int myNum = scan.nextInt();
+            if (myNum < 0 || myNum > 100) {
+                System.out.println("Вводите числа в диапазоне: 1 - 100");
+                myNum = 0;
+            }
+            pl1.inputNumPlr1[i - 1] = myNum;
+
+            if (myNum == compNum) {
+                System.out.println("Игрок - " + pl1.getName() + " угадал число - " + compNum + " c " + i + " попытки!");
+                break;
+            } else if (myNum == 0) {
+                System.out.println("Ваша попытка не засчитывается.");
+            } else if (myNum > compNum) {
+                System.out.println(myNum + " - БОЛЬШЕ загаданного");
+            } else {
+                System.out.println(myNum + " - МЕНЬШЕ загаданного");
+            }
+            System.out.println();
+            if (i == 5) {
+                System.out.println("У " + pl1.getName() + " закончились попытки!");
+                System.out.println();
+            }
+
+            System.out.print(pl2.getName() + ", введите число: ");
+            myNum = scan.nextInt();
+            if (myNum < 0 || myNum > 100) {
+                System.out.println("Вводите числа в диапазоне: 1 - 100");
+                myNum = 0;
+            }
+            pl2.inputNumPlr2[i - 1] = myNum;
+
+            if (myNum == compNum) {
+                System.out.println("Игрок - " + pl2.getName() + " угадал число - " + compNum + " c " + i + " попытки!");
+                break;
+            } else if (myNum == 0) {
+                System.out.println("Ваша попытка не засчитывается.");
+            } else if (myNum > compNum) {
+                System.out.println(myNum + " - БОЛЬШЕ загаданного");
+            } else {
+                System.out.println(myNum + " - МЕНЬШЕ загаданного");
+            }
+            System.out.println();
+            if (i == 5) {
+                System.out.println("У " + pl2.getName() + " закончились попытки!");
+                System.out.println();
+            }
+
+            System.out.print(pl3.getName() + ", введите число: ");
+            myNum = scan.nextInt();
+            if (myNum < 0 || myNum > 100) {
+                System.out.println("Вводите числа в диапазоне: 1 - 100");
+                myNum = 0;
+            }
+            pl3.inputNumPl3[i - 1] = myNum;
+
+            if (myNum == compNum) {
+                System.out.println("Игрок - " + pl3.getName() + " угадал число - " + compNum + " c " + i + " попытки!");
+                break;
+            } else if (myNum == 0) {
+                System.out.println("Ваша попытка не засчитывается.");
+            } else if (myNum > compNum) {
+                System.out.println(myNum + " - БОЛЬШЕ загаданного");
+            } else {
+                System.out.println(myNum + " - МЕНЬШЕ загаданного");
+            }
+            System.out.println();
+            if (i == 5) {
+                System.out.println("У " + pl3.getName() + " закончились попытки!");
+                System.out.println();
+            }
+            i++;
+        }
+
+        int[] copyNumPl1 = Arrays.copyOf(pl1.inputNumPlr1, i);
+        int[] copyNumPl2 = Arrays.copyOf(pl2.inputNumPlr2, i);
+        int[] copyNumPL3 = Arrays.copyOf(pl3.inputNumPl3, i);
+        Arrays.fill(pl1.inputNumPlr1, 0);
+        Arrays.fill(pl2.inputNumPlr2, 0);
+        Arrays.fill(pl3.inputNumPl3, 0);
+        System.out.println();
+
+        System.out.println("Названные числа игроком " + pl1.getName() + ":");
+        for (int k : copyNumPl1) {
+            System.out.print(k + " ");
+        }
+        System.out.println();
+
+        System.out.println("Названные числа игроком " + pl2.getName() + ":");
+        for (int k : copyNumPl2) {
+            System.out.print(k + " ");
+        }
+        System.out.println();
+
+        System.out.println("Названные числа игроком " + pl3.getName() + ":");
+        for (int k : copyNumPL3) {
+            System.out.print(k + " ");
+        }
+        System.out.println();
+    }
 }
