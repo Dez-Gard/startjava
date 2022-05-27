@@ -107,18 +107,27 @@ public class GuessNumber {
 
         System.out.println("Названные числа игроком " + pl1.getName() + ":");
         for (int k : copyNumPl1) {
+            if (k == 0){
+                continue;
+            }
             System.out.print(k + " ");
         }
         System.out.println();
 
         System.out.println("Названные числа игроком " + pl2.getName() + ":");
         for (int k : copyNumPl2) {
+            if (k == 0){
+                continue;
+            }
             System.out.print(k + " ");
         }
         System.out.println();
 
         System.out.println("Названные числа игроком " + pl3.getName() + ":");
         for (int k : copyNumPL3) {
+            if (k == 0){
+                continue;
+            }
             System.out.print(k + " ");
         }
         System.out.println();

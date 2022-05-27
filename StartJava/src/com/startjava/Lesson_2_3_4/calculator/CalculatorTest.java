@@ -14,7 +14,7 @@ public class CalculatorTest {
 
             System.out.print("Введите математическое выражение: ");
             String userInfo = scan.nextLine();
-            String[] data = new String[3];
+            String[] data;
             data = userInfo.split("\\ ");
 
             double checkNum1 = Double.parseDouble(data[0]);
@@ -36,7 +36,7 @@ public class CalculatorTest {
             int var2 = Integer.parseInt(data[2]);
             calc.setVar2(var2);
 
-            calc.calculate();
+            Calculator.calculate();
 
             do {
                 System.out.print("Желаете продолжить? [yes/no]: ");
