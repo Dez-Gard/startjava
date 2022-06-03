@@ -1,0 +1,10 @@
+SELECT * FROM "Jaegers"."Jaegers";
+SELECT * FROM "Jaegers"."Jaegers" WHERE destroyed = false;
+SELECT * FROM "Jaegers"."Jaegers" WHERE mark = 'Mark - 1' OR mark = 'Mark - 6';
+SELECT * FROM "Jaegers"."Jaegers" ORDER BY mark DESC;
+SELECT * FROM "Jaegers"."Jaegers" ORDER BY launch ASC LIMIT 1;
+SELECT * FROM "Jaegers"."Jaegers" WHERE kaiju_kill = (SELECT MAX(kaiju_kill) FROM "Jaegers"."Jaegers");
+SELECT * FROM "Jaegers"."Jaegers" WHERE kaiju_kill = (SELECT MIN(kaiju_kill) FROM "Jaegers"."Jaegers");
+SELECT AVG(weight) FROM "Jaegers"."Jaegers";
+UPDATE "Jaegers"."Jaegers" SET kaiju_kill = kaiju_kill + 1 WHERE destroyed = false;
+DELETE FROM "Jaegers"."Jaegers" WHERE destroyed = true;
