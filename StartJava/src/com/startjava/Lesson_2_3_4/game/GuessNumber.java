@@ -9,6 +9,8 @@ public class GuessNumber {
     private final Player pl1;
     private final Player pl2;
     private final Player pl3;
+    private int myNum;
+    private int compNum;
 
     public GuessNumber(Player pl1, Player pl2, Player pl3) {
         this.pl1 = pl1;
@@ -18,17 +20,14 @@ public class GuessNumber {
 
     public void start() {
         Random rnd = new Random();
-        int compNum = rnd.nextInt(100 + 1);
+        compNum = rnd.nextInt(100 + 1);
         Scanner scan = new Scanner(System.in);
 
         int i = 1;
         while (i < 6) {
             System.out.print(pl1.getName() + ", введите число: ");
-            int myNum = scan.nextInt();
-            if (myNum < 0 || myNum > 100) {
-                System.out.println("Вводите числа в диапазоне: 1 - 100");
-                myNum = 0;
-            }
+            myNum = scan.nextInt();
+            checkRange();
             pl1.inputNumPlr1[i - 1] = myNum;
 
             if (myNum == compNum) {
@@ -49,10 +48,7 @@ public class GuessNumber {
 
             System.out.print(pl2.getName() + ", введите число: ");
             myNum = scan.nextInt();
-            if (myNum < 0 || myNum > 100) {
-                System.out.println("Вводите числа в диапазоне: 1 - 100");
-                myNum = 0;
-            }
+            checkRange();
             pl2.inputNumPlr2[i - 1] = myNum;
 
             if (myNum == compNum) {
@@ -73,10 +69,7 @@ public class GuessNumber {
 
             System.out.print(pl3.getName() + ", введите число: ");
             myNum = scan.nextInt();
-            if (myNum < 0 || myNum > 100) {
-                System.out.println("Вводите числа в диапазоне: 1 - 100");
-                myNum = 0;
-            }
+            checkRange();
             pl3.inputNumPl3[i - 1] = myNum;
 
             if (myNum == compNum) {
@@ -107,7 +100,7 @@ public class GuessNumber {
 
         System.out.println("Названные числа игроком " + pl1.getName() + ":");
         for (int k : copyNumPl1) {
-            if (k == 0){
+            if (k == 0) {
                 continue;
             }
             System.out.print(k + " ");
@@ -116,7 +109,7 @@ public class GuessNumber {
 
         System.out.println("Названные числа игроком " + pl2.getName() + ":");
         for (int k : copyNumPl2) {
-            if (k == 0){
+            if (k == 0) {
                 continue;
             }
             System.out.print(k + " ");
@@ -125,11 +118,18 @@ public class GuessNumber {
 
         System.out.println("Названные числа игроком " + pl3.getName() + ":");
         for (int k : copyNumPL3) {
-            if (k == 0){
+            if (k == 0) {
                 continue;
             }
             System.out.print(k + " ");
         }
         System.out.println();
+    }
+
+    private void checkRange() {
+        if (myNum < 0 || myNum > 100) {
+            System.out.println("Вводите числа в диапазоне: 1 - 100");
+            myNum = 0;
+        }
     }
 }
